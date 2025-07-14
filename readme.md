@@ -1,4 +1,11 @@
-# Deprecated
+# Leaflet.TileLayer.PouchDBCached
+Updating this repo enough to work as a node module to be packaged
+
+
+## Credit
+From https://github.com/MazeMap/Leaflet.TileLayer.PouchDBCached.git which is now deprecated 
+
+## Previous documentation
 
 This repository is no longer maintained and is deprecated. Please be aware that it may not work with the latest versions of its dependencies.
 

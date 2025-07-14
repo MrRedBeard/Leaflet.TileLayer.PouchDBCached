@@ -2,6 +2,8 @@
 // copy-pasted off https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 import PouchDB from 'pouchdb';
 
+L.TileLayer.PouchDBCached = L.TileLayer.extend({});
+
 if (!HTMLCanvasElement.prototype.toBlob) {
 	Object.defineProperty(HTMLCanvasElement.prototype, "toBlob", {
 		value: function(callback, type, quality) {
@@ -52,7 +54,7 @@ L.TileLayer.prototype.options.cacheFormat = "image/png";
 // Maximum age of the cache, in milliseconds
 L.TileLayer.prototype.options.cacheMaxAge = 24 * 3600 * 1000;
 
-L.TileLayer.include({
+L.TileLayer.PouchDBCached.include({
 	// Overwrites L.TileLayer.prototype.createTile
 	createTile: function(coords, done) {
 		var tile = document.createElement("img");
@@ -350,3 +352,10 @@ L.TileLayer.include({
 		);
 	},
 });
+if (typeof L !== 'undefined' && L.TileLayer && L.TileLayer.PouchDBCached)
+{
+  L.tileLayer.pouchDBCached = function (opts)
+  {
+    return new L.TileLayer.PouchDBCached(opts);
+  };
+}
