@@ -7,7 +7,7 @@
     "build:esm": "rollup -c rollup.config.esm.js"
   },
   "type": "module",
-  "main": "dist/L.TileLayer.PouchDBCached.esm.js",
+  "main": "./dist/L.TileLayer.PouchDBCached.esm.js",
   "exports": {
     "import": "./dist/L.TileLayer.PouchDBCached.esm.js"
   },
