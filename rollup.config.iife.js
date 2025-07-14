@@ -16,11 +16,6 @@ export default {
       pouchdb: 'PouchDB'
     },
   },
-  external:
-  [
-    'leaflet',
-    'pouchdb'
-  ],
   plugins: [
     resolve({ browser: true, preferBuiltins: false }),
     commonjs(),

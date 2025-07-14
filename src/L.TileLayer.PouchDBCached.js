@@ -1,4 +1,5 @@
-import PouchDB from 'pouchdb';
+//import PouchDB from 'pouchdb';
+import PouchDB from 'pouchdb-browser';
 
 L.TileLayer.PouchDBCached = L.TileLayer.extend(
 {

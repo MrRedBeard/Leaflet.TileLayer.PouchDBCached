@@ -1,3 +1,8 @@
+# 1.0.1 (2025-07-14)
+
+* Minor updates but added a build process to support modules and bundled pouchdb into the distributable
+* Taking on some minor support and refactoring from https://github.com/MazeMap/Leaflet.TileLayer.PouchDBCached
+
 
 # 1.0.0 (2019-02-06)
 
