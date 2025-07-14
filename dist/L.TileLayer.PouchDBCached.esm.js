@@ -12622,3 +12622,4 @@ L.tileLayer.pouchDBCached = function (url, options)
 var L_TileLayer_PouchDBCached = L.TileLayer.PouchDBCached;
 
 export { L_TileLayer_PouchDBCached as default };
+//# sourceMappingURL=L.TileLayer.PouchDBCached.esm.js.map
