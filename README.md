@@ -1,5 +1,5 @@
 # Leaflet.TileLayer.PouchDBCached
-Updating this repo enough to work as a node module to be packaged
+Updating this repo enough to work as a module to be packaged
 
 PouchDB is now bundled into the module
 
