@@ -1,9 +1,35 @@
 # Leaflet.TileLayer.PouchDBCached
 Updating this repo enough to work as a node module to be packaged
 
+PouchDB is now bundled into the module
+
+### ESM Module
+See dist/L.TileLayer.PouchDBCached.esm.js
+
+### Vanilla JavaScript Usage
+See L.TileLayer.PouchDBCached.iife.js
+
+## Example
+- see test_module.html
+- see test_vanilla.html
+
+## Build
+```npm run build```
+
+## Pack
+```
+npm run build
+npm pack
+```
 
 ## Credit
 From https://github.com/MazeMap/Leaflet.TileLayer.PouchDBCached.git which is now deprecated 
+
+
+
+
+
+
 
 ## Previous documentation
 

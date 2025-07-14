@@ -1,8 +1,12 @@
-// HTMLCanvasElement.toBlob() polyfill
-// copy-pasted off https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 import PouchDB from 'pouchdb';
 
-L.TileLayer.PouchDBCached = L.TileLayer.extend({});
+L.TileLayer.PouchDBCached = L.TileLayer.extend(
+{
+	initialize: function (url, options)
+	{
+		L.TileLayer.prototype.initialize.call(this, url, options);
+	}
+});
 
 if (!HTMLCanvasElement.prototype.toBlob) {
 	Object.defineProperty(HTMLCanvasElement.prototype, "toBlob", {
@@ -352,10 +356,10 @@ L.TileLayer.PouchDBCached.include({
 		);
 	},
 });
-if (typeof L !== 'undefined' && L.TileLayer && L.TileLayer.PouchDBCached)
+
+L.tileLayer.pouchDBCached = function (url, options)
 {
-  L.tileLayer.pouchDBCached = function (opts)
-  {
-    return new L.TileLayer.PouchDBCached(opts);
-  };
-}
+	return new L.TileLayer.PouchDBCached(url, options);
+};
+
+export default L.TileLayer.PouchDBCached;
