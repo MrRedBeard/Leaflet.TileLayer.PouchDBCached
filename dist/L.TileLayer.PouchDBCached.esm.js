@@ -12619,6 +12619,15 @@ L.tileLayer.pouchDBCached = function (url, options)
 	return new L.TileLayer.PouchDBCached(url, options);
 };
 
+if (typeof window !== 'undefined' && window.L && typeof window.L.tileLayer?.pouchDBCached !== 'function')
+{
+  window.L.TileLayer.PouchDBCached = PouchDBCached;
+  window.L.tileLayer.pouchDBCached = function (...args)
+  {
+    return new PouchDBCached(...args);
+  };
+}
+
 var L_TileLayer_PouchDBCached = L.TileLayer.PouchDBCached;
 
 export { L_TileLayer_PouchDBCached as default };
