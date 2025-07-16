@@ -10,7 +10,12 @@ export default {
   output: {
     file: 'dist/L.TileLayer.PouchDBCached.esm.js',
     format: 'esm',
-    sourcemap: true
+    sourcemap: true,
+    inlineDynamicImports: true,
+    globals:
+    {
+      leaflet: 'L'
+    },
   },
   plugins: [
      alias({
@@ -24,6 +29,7 @@ export default {
         preferBuiltins: false 
       }),
       commonjs({
+        include: /node_modules/,
         transformMixedEsModules: true
       }),
       json(),

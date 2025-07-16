@@ -12624,10 +12624,10 @@ var LeafletPouchDBCached = (function () {
 
   if (typeof window !== 'undefined' && window.L && typeof window.L.tileLayer?.pouchDBCached !== 'function')
   {
-    window.L.TileLayer.PouchDBCached = PouchDBCached;
+    window.L.TileLayer.PouchDBCached = L.TileLayer.PouchDBCached;
     window.L.tileLayer.pouchDBCached = function (...args)
     {
-      return new PouchDBCached(...args);
+      return new L.TileLayer.PouchDBCached(...args);
     };
   }
 

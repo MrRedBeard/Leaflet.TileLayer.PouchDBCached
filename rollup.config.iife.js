@@ -10,15 +10,18 @@ export default {
     format: 'iife',
     name: 'LeafletPouchDBCached',
     sourcemap: true,
+    inlineDynamicImports: true,
     globals:
     {
-      leaflet: 'L',
-      pouchdb: 'PouchDB'
+      leaflet: 'L'
     },
   },
   plugins: [
     resolve({ browser: true, preferBuiltins: false }),
-    commonjs(),
+    commonjs({
+      include: /node_modules/,
+      transformMixedEsModules: true
+    }),
     json(),
     polyfills()
   ]

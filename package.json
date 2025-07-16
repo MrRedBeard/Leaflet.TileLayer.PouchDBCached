@@ -32,7 +32,6 @@
   "homepage": "https://github.com/MrRedBeard/Leaflet.TileLayer.PouchDBCached#readme",
   "dependencies": {
     "leaflet": "^1.9.4",
-    "pouchdb": "^9.0.0",
     "pouchdb-browser": "^9.0.0",
     "vite": "^7.0.4"
   },
