@@ -7,8 +7,8 @@ import pkg from './package.json' assert { type: 'json' };
 export default {
   input: 'src/L.TileLayer.PouchDBCached.js',
   output: {
-    file: 'dist/L.TileLayer.PouchDBCached.iife.js',
-    format: 'iife',
+    file: 'dist/L.TileLayer.PouchDBCached.umd.js',
+    format: 'umd',
     name: 'LeafletPouchDBCached',
     banner: `/*! LeafletPouchDBCached v${pkg.version} */`,
     sourcemap: true,

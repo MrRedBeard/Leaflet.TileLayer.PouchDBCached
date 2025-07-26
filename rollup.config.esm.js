@@ -4,12 +4,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
 import alias from '@rollup/plugin-alias';
+import pkg from './package.json' assert { type: 'json' };
 
 export default {
   input: 'src/L.TileLayer.PouchDBCached.js',
   output: {
     file: 'dist/L.TileLayer.PouchDBCached.esm.js',
     format: 'esm',
+    name: 'LeafletPouchDBCached',
+    banner: `/*! LeafletPouchDBCached v${pkg.version} */`,
     sourcemap: true,
     inlineDynamicImports: true,
     globals:

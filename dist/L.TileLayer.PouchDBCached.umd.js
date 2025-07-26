@@ -1,6 +1,9 @@
 /*! LeafletPouchDBCached v1.0.3 */
-var LeafletPouchDBCached = (function () {
-  'use strict';
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.LeafletPouchDBCached = factory());
+})(this, (function () { 'use strict';
 
   var global$1 = (typeof global !== "undefined" ? global :
     typeof self !== "undefined" ? self :
@@ -12699,5 +12702,5 @@ var LeafletPouchDBCached = (function () {
 
   return L_TileLayer_PouchDBCached;
 
-})();
-//# sourceMappingURL=L.TileLayer.PouchDBCached.iife.js.map
+}));
+//# sourceMappingURL=L.TileLayer.PouchDBCached.umd.js.map
